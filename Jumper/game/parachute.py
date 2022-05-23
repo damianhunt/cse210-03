@@ -1,5 +1,5 @@
 
-class parachute:
+class Parachute:
 
 
     def display_parachute(tries):
