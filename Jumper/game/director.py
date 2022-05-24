@@ -1,14 +1,13 @@
+from play import Play
+from puzzle import Puzzle
 
-
-
-
-def main():
-    word = get_word()
-    play(word)
-    while input("Play Again? (Y/N) ").upper() == "Y":
-        word = get_word()
-        play(word)
-
-
-if __name__ == "__main__":
-    main()
+class Director:
+    
+    def start_game():
+        word = Puzzle.get_word()
+        Play.play_game(word)
+        while input("Play Again? (Y/N) ").upper() == "Y":
+            word = Puzzle.get_word()
+            Play.play_game(word)
+        else:
+            print("Game Over")

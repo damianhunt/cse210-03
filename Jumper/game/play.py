@@ -3,7 +3,7 @@ from parachute import Parachute
 class Play:
 
 
-    def play(word):
+    def play_game(word):
         word_completion = "_" * len(word)
         guessed = False
         guessed_letters = []
