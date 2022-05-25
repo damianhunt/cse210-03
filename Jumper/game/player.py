@@ -1,3 +1,4 @@
+from Jumper.game.word import Word
 from word import Puzzle
 from parachute import Parachute
 
@@ -18,10 +19,18 @@ class Game:
     
     def __init__(self):
         
+        self._parachute = Parachute()
         self._game_in_progress = True
         self._guesses = False
-        self._complete_word = '_' * len(Puzzle.get_word())
-        self._guessed_letters = []
-        self._words = []
-        self._tries = 6
+        self._word = Word()
        
+    def start_game(self):
+        """Starts the game by running the main game loop.
+        
+        Args:
+            self (Director): an instance of Director.
+        """
+        while self._game_in_progress:
+            self._get_inputs()
+            self._do_updates()
+            self._do_outputs()
