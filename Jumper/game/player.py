@@ -1,6 +1,6 @@
 from Jumper.game.word import Word
-from word import Puzzle
 from parachute import Parachute
+from terminal_service import TerminalService
 
 class Game:
     '''
@@ -23,6 +23,7 @@ class Game:
         self._game_in_progress = True
         self._guesses = False
         self._word = Word()
+        self._terminal_service = TerminalService()
        
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -34,3 +35,12 @@ class Game:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
+    
+    def _get_inputs(self):
+        """Moves the seeker to a new location.
+
+        Args:
+            self (Director): An instance of Director.
+        """
+        new_location = self._terminal_service.read_number("\nEnter a location [1-1000]: ")
+        self._seeker.move_location(new_location)
