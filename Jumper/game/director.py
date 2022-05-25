@@ -1,5 +1,6 @@
 from play import Play
 from puzzle import Puzzle
+from parachute import Parachute
 
 class Director:
     
