@@ -12,7 +12,7 @@ class Game:
         game_in_progress (Boolean):
             Whether or not the game is
             currently being played or not.
-        Puzzle:
+        Word:
             The word generator for the parachute game.
         
     '''
