@@ -1,7 +1,9 @@
 from parachute import Parachute
 
 class Play:
-
+    def __init__(self):
+        
+        pass
 
     def play_game(word):
         word_completion = "_" * len(word)
