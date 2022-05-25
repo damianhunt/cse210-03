@@ -1,6 +1,5 @@
 from random import Random
 
-
 class Word:
 
     def __init__(self):
