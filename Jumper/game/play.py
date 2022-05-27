@@ -1,4 +1,6 @@
+from .puzzle import Puzzle
 from .parachute import Parachute
+
 
 class Play:
     def __init__(self):
@@ -7,6 +9,16 @@ class Play:
         self._guessed_letters = []
         self._guessed_words = []
         self._tries = 6
+
+
+    def start_game(self):
+        word = Puzzle.get_word(self)
+        Play.play_game(word)
+        while input("Play Again? (Y/N) ").upper() == "Y":
+            word = Puzzle.get_word(self)
+            Play.play_game(word)
+        else:
+            print("Game Over")
 
     def play_game(word):
         print("Let's play Jumper!")
