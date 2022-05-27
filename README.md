@@ -1,6 +1,6 @@
 # cse210-03
 # Jumber
-How many words can you guess before you run out of chances. Play the jumber game and discover the thrill of guessing correctly. All u have to do is pick any letter from a to z and make words. See if the word you have in mind exists in the data bank. Good luck.
+How many words can you guess before you run out of chances. Play the jumber game and discover the thrill of guessing correctly. All you have to do is pick any letter from a to z and make words. See if the word you have in mind exists in the data bank. Good luck.
 
 ---
 ## Getting Started
