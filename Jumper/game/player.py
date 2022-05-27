@@ -42,5 +42,11 @@ class Game:
         Args:
             self (Director): An instance of Director.
         """
-        new_location = self._terminal_service.read_number("\nGuess a letter: ")
-        self._seeker.move_location(new_location)
+        letter = self._terminal_service.read_number("\nGuess a letter: ")
+        
+        
+    def _do_updates(self):
+        
+        
+    def _do_outputs(self):
+        

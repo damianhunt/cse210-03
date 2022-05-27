@@ -1,65 +1,69 @@
 
-from Jumper.game.player import Game
-
-
 class Parachute:
-    def __init__(self, attempts):
-       
-       self._parachute = attempts
-       
-    def draw_parachute(attempts):
-        parachute = [
-            '''
-              x
-             /|\\
-             / \\
-                 
-           ^^^^^^^
-            '''
-            ,
-            '''
-             \\ /
-              0
-             /|\\
-             / \\
-                 
-           ^^^^^^^
-            '''
-            ,
-            '''
-            \\   /
-             \\ /
-              0
-             /|\\
-             / \\
-                 
-           ^^^^^^^
-            '''
-            ,
-            '''
-            /___\\
-            \\   /
-             \\ /
-              0
-             /|\\
-             / \\
-                 
-           ^^^^^^^
-            '''
-            ,
-            '''
-             ___
-            /___\\
-            \\   /
-             \\ /
-              0
-             /|\\
-             / \\
-                 
-           ^^^^^^^
-            '''
+    
+    
+
+    def display_parachute(tries):
+        stages = [  # final state: Parachute completely gone, player dies
+                    """
+                     x
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """,
+                    # another piece gone
+                    """
+                    \\/
+                     o
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """,
+                    # another piece gone
+                    """
+                   \\  /
+                    \\/
+                     o
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """,
+                    # another piece gone
+                    """
+                    ___
+                   \\  /
+                    \\/
+                     o
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """,
+                    # one piece off parachute
+                    """
+                   /___\\
+                   \\  /
+                    \\/
+                     o
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """,
+                    # initial parachute state
+                    """
+                    ___
+                   /___\\
+                   \\  /
+                    \\/
+                     o
+                    /|\\
+                    / \\
+                    
+                  ^^^^^^^  
+                    """
         ]
-        return parachute[attempts]
-    
-    
-        
+        return stages[tries]
