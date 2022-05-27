@@ -1,6 +1,6 @@
-from Jumper.game.word import Word
-from parachute import Parachute
-from terminal_service import TerminalService
+from game.word import Word
+from game.parachute import Parachute
+from game.terminal_service import TerminalService
 
 class Game:
     '''
@@ -42,11 +42,12 @@ class Game:
         Args:
             self (Director): An instance of Director.
         """
-        letter = self._terminal_service.read_number("\nGuess a letter: ")
+        letter = self._terminal_service.read_text("\nGuess a letter: ")
         
         
     def _do_updates(self):
-        
+        pass
         
     def _do_outputs(self):
+        self._terminal_service.write_text(self._parachute.display_parachute(5))
         
