@@ -23,6 +23,8 @@ class Game:
         self._game_in_progress = True
         self._guesses = False
         self._word = Word()
+        self._guessed_letters = []
+        self.word_completion = "_" * len(self._word)
         self._terminal_service = TerminalService()
        
     def start_game(self):
@@ -46,8 +48,14 @@ class Game:
         
         
     def _do_updates(self):
+        # What needs to be updated?
+        # Number of tries if the guessed letter is wrong
+        # Word completion if the letter guessed is the right one.
         pass
         
     def _do_outputs(self):
+        # What to display?
+        # Display the stage of the parachute depending on how many tries user has left.
+        # Word Completion.
         self._terminal_service.write_text(self._parachute.display_parachute(5))
         
