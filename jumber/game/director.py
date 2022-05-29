@@ -45,7 +45,6 @@ class Director:
             
             
         if self._parachute.parachute_alive:
-            #Print messfor
             print('You won!!!!')
             print('The word was ' + self._puzzle.secret_word)  
             
