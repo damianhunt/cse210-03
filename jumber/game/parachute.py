@@ -3,17 +3,27 @@ class Parachute:
     A class that handles play attempts for each player.
     
     Attributes:
+        parachute: the chances of playing before game is over
+        parachute alive: A state of the parachute
     
     """
 
     def __init__(self):
-       self.new_parachute = [' ___', '/___\\', '\\   /', ' \\ /', '  0', ' /|\\',' / \\', '^^^^^^']
-       self.parachute_alive = True
+        """
+        Construct a new parachute
+        Args
+            self(Parachute)   An instance of the  Parachute
+        """
+        
+        
+        self.new_parachute = [' ___', '/___\\', '\\   /', ' \\ /', '  0', ' /|\\',' / \\', '^^^^^']
+        self.parachute_alive = True
    
     def draw_parachute(self):
-        """Construct a new parachute 
-             Args:
-             
+        """Draws a new parachute
+        
+          Args:
+                self(Parachute): An instance of the Parachute    
         """
         for line in self.new_parachute:
             print(line)

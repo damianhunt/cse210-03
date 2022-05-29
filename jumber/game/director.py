@@ -12,7 +12,7 @@ class Director:
     parachute(Parachute()): The parachute in the game
     puzzle(Puzzle()): The Puzzle in the game
     terminal_services(Terminal Services()): Reads and displays information to the user
-    is_playing: Playing status whether playing or not playing
+
         
     """
 
@@ -54,16 +54,13 @@ class Director:
             print('The word was ' + self._puzzle.secret_word)
             print('Game Over!!. Try again next time.')
         
-            
-            
-    
     
     def _write_instructions(self):
         """
-        Constructs a new Writer.
+        Displays instructions of the game to the player.
         
         Args:
-            self (write_instruction): an instance of Director.
+           self (Director): an instance of Director.
         """
         print(' Jumber is a guessing game. Choose any letter from a to z to build')
         print('a word from the word bank. See how many words you can build.') 
@@ -71,7 +68,9 @@ class Director:
     
     def is_game_over(self):
         """
-        Checks if the player has attempts to play the game or it is game over
+        Checks if the player has attempts to play the game or it is game over.
+         Args:
+            self (Director): an instance of Director.
         """
         if self._parachute.parachute_alive and not self._puzzle.puzzle_complete():
             return False
