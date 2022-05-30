@@ -1,9 +1,14 @@
-from .puzzle import Puzzle
-from .parachute import Parachute
+from puzzle import Puzzle
+from parachute import Parachute
+from terminal import TerminalService
 
 
 class Play:
     def __init__(self):
+        self._puzzle = Puzzle()
+        self._parachute = Parachute()
+        self._terminal = TerminalService()
+
         self._word_completion = "_" * len(self)
         self._guessed = False
         self._guessed_letters = []
@@ -12,17 +17,17 @@ class Play:
 
 
     def start_game(self):
-        word = Puzzle.get_word(self)
+        word = self._puzzle.get_word(self)
         Play.play_game(word)
         while input("Play Again? (Y/N) ").upper() == "Y":
-            word = Puzzle.get_word(self)
+            word = self._puzzle.get_word(self)
             Play.play_game(word)
         else:
             print("Game Over")
 
-    def play_game(word):
+    def play_game(self,word):
         print("Let's play Jumper!")
-        print(Parachute.display_parachute(tries))
+        print(self._parachute.display_parachute(tries))
         print(word_completion)
         print("\n")
         while not guessed and tries > 0:
@@ -56,7 +61,7 @@ class Play:
                     word_completion = word
             else:
                 print("Not a valid guess.")
-            print(Parachute.display_parachute(tries))
+            print(self._parachute.display_parachute(tries))
             print(word_completion)
             print("\n")
         if guessed:
