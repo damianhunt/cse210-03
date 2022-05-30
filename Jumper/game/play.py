@@ -14,9 +14,6 @@ class Play:
         self._guessed_words = []
         self._tries = 6
 
-    def game:
-        start_game
-
     def start_game(self):
         word = self._puzzle.get_word(self)
         Play.play_game(word)
