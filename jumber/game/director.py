@@ -45,6 +45,7 @@ class Director:
             
             
         if self._parachute.parachute_alive:
+            #Print messfor
             print('You won!!!!')
             print('The word was ' + self._puzzle.secret_word)  
             
@@ -70,9 +71,6 @@ class Director:
         Checks if the player has attempts to play the game or it is game over.
          Args:
             self (Director): an instance of Director.
-            
-          returns
-             A boolean: result of comparison between a word status and game status
         """
         if self._parachute.parachute_alive and not self._puzzle.puzzle_complete():
             return False

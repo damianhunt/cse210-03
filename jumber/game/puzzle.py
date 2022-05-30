@@ -24,11 +24,11 @@ class Puzzle:
       """
       self.words = ['mum', 'dad', 'sister', 'brother', 'me', 'you', 'mine', 
                     'ours', 'mother', 'father', 'aunt','grandma',"walk","wall","wander",
-                    "wandering","want","wanting","war","warlike","warm","warn","wary","wash","waste",
+                    "want","war","warm","warn","wary","wash","waste",
                     "yam","yard","yarn","yawn","year","yell","yellow",
                     "fact","fade","faded","fail","faint","fair",
-                    "class","classy","clean","clear","clever","clip",
-                    "cloistered","close","closed","cloth",
+                    "class","clean","clear","clever","clip",
+                    "close","closed","cloth",
                     "cloudy","clover","club","afford","afraid",]
       self.secret_word = random.choice(self.words)
       self.letters = ['_' for char in self.secret_word] 
