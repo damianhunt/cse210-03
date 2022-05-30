@@ -1,11 +1,8 @@
 
 class Parachute:
-    def __init__(self, tries):
+    def __init__(self):
    
-        self._parachute = tries
-
-    def display_parachute(tries):
-        stages = [  # final state: Parachute completely gone, player dies
+        self._parachute = [  # final state: Parachute completely gone, player dies
                     """
                      x
                     /|\\
@@ -67,4 +64,9 @@ class Parachute:
                   ^^^^^^^  
                     """
         ]
+
+
+    def display_parachute(self,tries):
+        stages = self._parachute
+        
         return stages[tries]

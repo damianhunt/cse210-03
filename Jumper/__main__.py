@@ -1,4 +1,4 @@
-from game.play import Play
+from game.director import Director
 
-director = Play()
+director = Director()
 director.start_game()

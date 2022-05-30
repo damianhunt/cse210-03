@@ -64,13 +64,13 @@ class Puzzle:
                     'bereft','matte','bill','medal','prickly','sarcasm','stuffy','allege','monopoly',
                     'lighter','repair','worship','vent','hybrid','buffet','lively'
                     ]
-        self._get_word = Random.choice(self._list)
+        #self._get_word = Random.choice(self._list)
         self._guessed_letters = []
         self.guessed_words = []
 
-    #def get_word(self):
-    #    word = Random.choice(self._list)
-    #    return word.upper()
+    def get_word(self):
+        word = Random.choice(self._list)
+        return word.upper()
 
     def guess(self):
         while not guessed and Parachute.self._parachute > 0:
@@ -86,22 +86,22 @@ class Puzzle:
                     print("Good job,", guess, "is in the word!")
                     self._guessed_letters.append(guess)
                     word_as_list = list(word_completion)
-                    indices = [i for i, letter in enumerate(self._get_word) if letter == guess]
+                    indices = [i for i, letter in enumerate(Puzzle.get_word(self)) if letter == guess]
                     for index in indices:
                         word_as_list[index] = guess
                     word_completion = "".join(word_as_list)
                     if "_" not in word_completion:
                         guessed = True
-            elif len(guess) == len(self._get_word) and guess.isalpha():
+            elif len(guess) == len(Puzzle.get_word(self)) and guess.isalpha():
                 if guess in self.guessed_words:
                     print("You already guessed the word", guess)
-                elif guess != self._get_word:
+                elif guess != Puzzle.get_word(self):
                     print(guess, "is not the word.")
                     tries -= 1
                     self.guessed_words.append(guess)
                 else:
                     guessed = True
-                    word_completion = self._get_word
+                    word_completion = Puzzle.get_word(self)
             else:
                 print("Not a valid guess.")
             print(Parachute.display_parachute(tries))
@@ -110,4 +110,4 @@ class Puzzle:
         if guessed:
             print("Congrats, you guessed the word! You win!")
         else:
-            print("Sorry, you ran out of tries. The word was " + self._get_word + ". Maybe next time!")
+            print("Sorry, you ran out of tries. The word was " + Puzzle.get_word(self) + ". Maybe next time!")
