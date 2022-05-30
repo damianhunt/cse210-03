@@ -7,6 +7,7 @@ class Play:
     def __init__(self):
         self._puzzle = Puzzle()
         self._terminal = TerminalService()
+        self._parachute = Parachute()
 
         self._word_completion = "_" * len(self)
         self._guessed = False
