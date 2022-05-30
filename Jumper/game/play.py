@@ -1,12 +1,12 @@
-from puzzle import Puzzle
-from parachute import Parachute
-from terminal import TerminalService
+from game.puzzle import Puzzle
+from game.parachute import Parachute
+from game.terminal import TerminalService
 
 
 class Play:
     def __init__(self):
         self._puzzle = Puzzle()
-        self._parachute = Parachute()
+        self._parachute = Parachute(tries)
         self._terminal = TerminalService()
 
         self._word_completion = "_" * len(self)
