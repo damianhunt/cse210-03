@@ -1,6 +1,6 @@
 from game.puzzle import Puzzle
 from game.parachute import Parachute
-from game.terminal import TerminalService
+from game.terminal_service import TerminalService
 
 
 class Play:
@@ -23,4 +23,6 @@ class Play:
             Play.play_game(word)
         else:
             print("Game Over")
+    
+        
 
