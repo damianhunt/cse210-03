@@ -8,6 +8,3 @@ class Word:
     def get_word(self):
         self._random_word = Random.choice(self._list)
         return self._random_word.upper()
-    
-    def check_letter(self):
-        
